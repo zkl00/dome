@@ -10,7 +10,11 @@
       </scroll-view>
     </view>
   </modalView>
-  <!-- 获取物流信息 -->
+  <!-- 获取物流信息  steps 它里面的值必须要用  {
+        text: '步骤一',  key必须是 text
+        desc: '描述信息'  key必须是 desc
+      }, -->
+  
   <van-steps
   steps="{{ dataList }}"
   active="{{ active }}"
