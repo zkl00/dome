@@ -10,3 +10,10 @@
       </scroll-view>
     </view>
   </modalView>
+  <!-- 获取物流信息 -->
+  <van-steps
+  steps="{{ dataList }}"
+  active="{{ active }}"
+  direction="vertical"
+  active-color="#ee0a24"
+/>

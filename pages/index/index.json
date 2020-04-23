@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "modalView":"../../components/moder/moder"
+    "modalView":"../../components/moder/moder",
+    "van-steps": "@vant/weapp/steps/index"
   }
 }
