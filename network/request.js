@@ -1,6 +1,11 @@
 
 import {baseURL} from './baser'
-export default function request(confing){
+
+// 缓存token 
+export const {token,timestamp,member_id,shop_id,order_id} = wx.getStorageSync('list')
+
+// 请求
+export  function request(confing){
   return new Promise((resolve,error)=>{
     wx.request({
       url:baseURL+confing.url,

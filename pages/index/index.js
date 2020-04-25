@@ -1,4 +1,4 @@
-import request from '../../network/request'
+import {request,token,timestamp,member_id,shop_id,order_id} from '../../network/request'
 Page({
 
   /**
@@ -7,7 +7,7 @@ Page({
   data: {
     showModal: false, // 显示modal弹窗
     single: false ,// false 只显示一个按钮，如果想显示两个改为true即可
-    active:'2'
+    active:''
   },
   btnClick() {
     this.setData({
@@ -28,13 +28,13 @@ Page({
    */
   onLoad: function (options) {
   // 存数据
-    wx.setStorageSync('list', {
-      name:"zkl",
-      id:"1"
-    })
-    // 取数据
-    let one = wx.getStorageSync('list')
-    console.log(one)
+    // wx.setStorageSync('list', {
+    //   name:"zkl",
+    //   id:"1"
+    // })
+    // // 取数据
+    // let one = wx.getStorageSync('list')
+    // console.log(one)
        this.PostList()
   },
   // 获取步骤条
@@ -45,11 +45,11 @@ Page({
     request({
       url: '/orderlist/getlogisticsinfo',
       data: {
-        timestamp: 1587634934916,
-        token: 'EEF5E0A2-D459-51DF-88E4-A255B5FD53A2',
-        member_id: 1,
-        shop_id: 5,
-        order_id: 2
+        timestamp,
+        token,
+        member_id,
+        shop_id,
+        order_id
       },
       method: 'post',
       header: {
@@ -58,6 +58,7 @@ Page({
     }).then((res) => {
       let { code, msg } = res.data
       let { data } = res.data
+      console.log(data.length)
       if (code) {
         wx.hideLoading()
         data.forEach((item) => {
@@ -68,7 +69,8 @@ Page({
           // item.time = arrList[1]
         })
         this.setData({
-          dataList:data
+          dataList:data,
+          active:data.length
         })
       }
 
