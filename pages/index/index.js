@@ -70,7 +70,7 @@ Page({
         })
         this.setData({
           dataList:data,
-          active:data.length
+          active:data.length - 1
         })
       }
 

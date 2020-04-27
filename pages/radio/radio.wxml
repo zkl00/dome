@@ -1,0 +1,20 @@
+<!--pages/radio/radio.wxml-->
+<!-- <view class="box-warp">
+<input type="text" bindinput="changgeList"/><button size="mini" bindtap="countList">添加</button>
+</view> -->
+<view class="box-warp">
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入用户名"
+    border="{{ true }}"
+    bind:change="changgeList"
+  />
+</van-cell-group>
+<van-button type="primary" size="mini" bindtap="countList">添加</van-button>
+</view>
+<radio-group>
+  <radio value="item.id" wx:for="{{radioList}}" wx:key="index" checked="{{item.id == flay}}">
+    <text>{{item.name}}</text>
+  </radio>
+</radio-group>

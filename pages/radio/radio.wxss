@@ -1,0 +1,8 @@
+/* pages/radio/radio.wxss */
+.box-warp{
+  display: flex;
+}
+input{
+  /* width: 300rpx; */
+  border-bottom: 1px solid #eeee;
+}
