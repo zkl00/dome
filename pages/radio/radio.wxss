@@ -1,6 +1,13 @@
 /* pages/radio/radio.wxss */
 .box-warp{
   display: flex;
+  padding: 30rpx 20rpx;
+  background-color: #ccc;
+  align-items: center;
+  
+}
+.redioList{
+  margin-left: 20rpx;
 }
 input{
   /* width: 300rpx; */

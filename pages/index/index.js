@@ -22,6 +22,9 @@ Page({
   modalConfirm(e) {
     // 这里面处理点击确定按钮业务逻辑
     console.log('点击了确定')
+    wx.navigateTo({
+      url: '../radio/radio',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
