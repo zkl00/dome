@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "单选按钮的使用",
 					"pathName": "pages/radio/radio",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "flex布局",
+					"pathName": "pages/flex/flex",
 					"scene": null
 				}
 			]

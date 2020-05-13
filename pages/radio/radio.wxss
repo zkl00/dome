@@ -13,3 +13,39 @@ input{
   /* width: 300rpx; */
   border-bottom: 1px solid #eeee;
 }
+.coun_warp{
+  padding: 30rpx 0;
+}
+.bpxPrect{
+  position: relative;
+  overflow: hidden;
+}
+.bpxPrect image{
+  width: 350rpx;
+  border-radius: 10rpx;
+  
+}
+.active{
+  border: 1rpx solid #7cd8db;
+  /* margin: 10rpx、; */
+  border-radius: 10rpx;
+}
+.text{
+  font-size: 18rpx;
+  position: absolute;
+  top:1rpx;
+  color: white;
+  transform:rotate(-30deg);
+}
+.price{
+  position: absolute;
+  top: 20rpx;
+  /* text-align: center; */
+  left: 0%;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  flex-wrap: wrap;
+}

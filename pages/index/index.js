@@ -42,9 +42,6 @@ Page({
   },
   // 获取步骤条
   PostList(){
-    wx.showLoading({
-      title: '加载中',
-    })
     request({
       url: '/orderlist/getlogisticsinfo',
       data: {
@@ -63,7 +60,7 @@ Page({
       let { data } = res.data
       console.log(data.length)
       if (code) {
-        wx.hideLoading()
+      
         data.forEach((item) => {
           item.text = item.AcceptStation
           item.desc = item.AcceptTime

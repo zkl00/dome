@@ -1,0 +1,90 @@
+/* pages/flex/flex.wxss */
+.content_warp{
+  padding: 15rpx;
+  /* width: 100%; */
+}
+.content_box{
+  width: 100%;
+  display: flex;
+  height: 103rpx;
+  justify-content: space-between;
+}
+.left{
+  width: 277rpx;
+  height: 103rpx;
+  background: red;
+}
+.top{
+  width: 137rpx;
+  height: 49rpx;
+  background: green;
+  display: flex;
+  /* justify-content: flex-end; */
+}
+.rightBox{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.bottom{
+  width: 100%;
+  background: green;
+  margin: 5rpx 0;
+}
+
+
+
+
+.mine_warp{
+  margin: 10rpx 0;
+  width: 100%;
+  display: flex;
+  /* background: red; */
+  justify-content: space-between;
+}
+
+.mine_left{
+  width: 310rpx;
+  height: 435rpx;
+  background: yellow;
+}
+.min_right{
+  background-color: blue;
+	width: 190rpx;
+	height: 400rpx;
+
+}
+.minme_comtent{
+  width: 100%;
+}
+.z{
+  width: 450rpx;
+  background-color: purple;
+  height: 240rpx;
+  margin: 10rpx auto;
+}
+.k{
+  width: 450rpx;
+  height: 110rpx;
+  background-color: purple;
+  margin: 10rpx auto;
+
+}
+.l{
+  width: 450rpx;
+  height: 30rpx;
+  background-color: purple;
+
+  margin: 10rpx auto;
+
+}
+.mine_box{
+  display: flex;
+  justify-content: space-between;
+}
+.q{
+  width: 100%;
+  height: 25rpx;
+  background-color: purple;
+}

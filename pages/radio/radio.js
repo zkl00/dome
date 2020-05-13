@@ -1,4 +1,5 @@
 // pages/radio/radio.js
+import {request,token,timestamp,member_id,shop_id,order_id} from '../../network/request'
 Page({
 
   /**
@@ -15,22 +16,46 @@ Page({
         id: "2"
       },
     ],
-    value:""
+    value:"",
+    fly:true,
+
+    currindex:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    // this.countList()
+   
   },
-  changgeList(e) {
-    let value = e.detail
-    this.setData({
-      value
+  gitCount(){
+    wx.showLoading({
+      title: '加载中',
     })
-
+    request({
+      url:"/vip/ifhaspassword",
+      method:"post",
+      data:{
+        timestamp,
+        token,
+        member_id,
+        shop_id,
+        order_id
+      }
+    }).then((res)=>{
+      console.log(res)
+      let {code,msg,data} =res.data
+      if(!data){
+        wx.showToast({
+          title: '从新登陆',
+          icon:"none",
+          duration:3000
+        })
+        wx.navigateBack({
+            delta:1
+        })
+      }
+    })
   },
   countList() {
     let id = this.data.value//输入框的id
@@ -38,7 +63,7 @@ Page({
     let index = arr.findIndex(item => item.id == id)
   //  console.log(arr.reduce((item)=>item.id == id))
   // console.log(arr.find((item)=>item.id == id))
-
+  this.gitCount()
     if (index === -1) {
       this.setData({
         flay: 2

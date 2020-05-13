@@ -1,0 +1,27 @@
+<view class="content_warp">
+
+	<view class="content_box">
+		<view class="left">1</view>
+		<view class="rightBox">
+			<view class="top">2</view>
+			<view class="bottom">3</view>
+		</view>
+	</view>
+
+	<view class="mine_warp">
+		<view class="mine_left">1</view>
+		<view class="minneboax">
+			<view class="mine_box">
+				<view class="minme_comtent">
+					<view class="z">2</view>
+					<view class="k">3</view>
+					<view class="l">4</view>
+				</view>
+				<view class="min_right">5</view>
+			</view>
+  <view class="q">1</view>
+		</view>
+
+	</view>
+
+</view>

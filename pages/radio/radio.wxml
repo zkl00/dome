@@ -3,21 +3,17 @@
 <input type="text" bindinput="changgeList"/><button size="mini" bindtap="countList">添加</button>
 </view> -->
 <view class="box-warp">
-<van-cell-group>
-  <van-field
-    value="{{ value }}"
-    placeholder="请输入用户名"
-    border="{{ true }}"
-    bind:change="changgeList"
-    type="number"
-  />
-</van-cell-group>
-<view class="viewList">
-<van-button type="primary" size="mini"  bindtap="countList" custom-style="width:150rpx;  height:100rpx ; line-height: 100rpx; margin:0 10rpx;font-size:35rpx;">添加</van-button>
-</view>
+	<van-cell-group>
+		<van-field value="{{ value }}" placeholder="请输入用户名" border="{{ true }}" bind:change="changgeList" type="number" />
+	</van-cell-group>
+	<view class="viewList">
+		<van-button type="primary" size="mini" bindtap="countList" custom-style="width:150rpx;  height:100rpx ; line-height: 100rpx; margin:0 10rpx;font-size:35rpx;">添加</van-button>
+	</view>
 </view>
 <radio-group class="redioList">
-  <radio value="item.id" wx:for="{{radioList}}" wx:key="index" checked="{{item.id == flay}}">
-    <text>{{item.name}}</text>
-  </radio>
+	<radio value="item.id" wx:for="{{radioList}}" wx:key="index" checked="{{item.id == flay}}">
+		<text>{{item.name}}</text>
+	</radio>
 </radio-group>
+
+   
